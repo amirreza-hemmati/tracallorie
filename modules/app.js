@@ -1,0 +1,1 @@
+const appControler = new CAppControler;
