@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TraCalorie</title>
+    <link rel="stylesheet" href="materialize.min.css" />
+    <!--<link rel="stylesheet" href="css/all.min.css" />-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/2c233786e6.css"/>
+    <style>
+        .badge {
+            float: none !important;
+        }
+
+        #btn-group{
+            display: none;
+        }
+		ul > li{
+			overflow: auto;
+		}
+		.new{
+			font-size: 15px !important;
+			font-weight: 500 !important;
+		}
+		.new::after{
+			display: none !important;
+		}
+        .pencil-alt::before{
+            font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+            content: "\f303";
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="wrapper blue">
+        <div class="container">
+            <a href="index.html" class="brand-logo center">TraCalorie</a>
+            <div class="right">
+                <a href="#" id="btn-clear" class="btn blue lighten-3">Clear All</a>
+            </div>
+        </div>
+    </nav>
+    <br><br><br>
+    <main class="container">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Add Meal / Colorie</span>
+                <form class="col">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="text" id="input-meal" autocomplete="off"/>
+                            <label for="add-item">Meal</label>
+                        </div>
+
+                        <div class="input-field col s6">
+                            <input type="number" id="input-calories" autocomplete="off"/>
+                            <label for="add-item">Calories</label>
+                        </div>
+
+                        <button type="button" id="btn-add" class="btn blue darken-3">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                            &nbsp;&nbsp;
+                            Add Meal
+                        </button>
+
+                        <div id="btn-group">
+                            <button type="button" id="btn-update" class="btn orange">
+                                <i class="fa fa-edit"></i>
+                                &nbsp;&nbsp;
+                                Edit Meal
+                            </button>
+                            <button type="button" id="btn-delete" class="btn red">
+                                <i class="fa fa-trash"></i>
+                                &nbsp;&nbsp;
+                                Delete Meal
+                            </button>
+                            <button type="button" id="btn-back" class="btn grey right">
+                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                &nbsp;&nbsp;&nbsp;
+                                Back
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <h3 class="center-align">Total Calories : <span id="total-cal">0</span></h3>
+        <br>
+        <ul id="list-item" class="collection"></ul>
+    </main>
+
+    <script src="materialize.min.js"></script>
+    <script src="modules/uiCtrl.js"></script>
+    <script src="modules/itemCtrl.js"></script>
+    <script src="modules/appCtrl.js"></script>
+    <script src="modules/app.js"></script>
+</body>
+
+</html>
